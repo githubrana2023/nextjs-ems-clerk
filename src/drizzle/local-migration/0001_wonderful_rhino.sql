@@ -1,0 +1,4 @@
+ALTER TABLE "member_transaction" ADD COLUMN "member_id" uuid NOT NULL;--> statement-breakpoint
+ALTER TABLE "family_transaction" ADD COLUMN "family_id" uuid NOT NULL;--> statement-breakpoint
+ALTER TABLE "member_transaction" ADD CONSTRAINT "member_transaction_member_id_members_id_fk" FOREIGN KEY ("member_id") REFERENCES "public"."members"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE "family_transaction" ADD CONSTRAINT "family_transaction_family_id_family_table_id_fk" FOREIGN KEY ("family_id") REFERENCES "public"."family_table"("id") ON DELETE no action ON UPDATE no action;
