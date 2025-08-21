@@ -1,4 +1,3 @@
-import {  CreateOrganization, UserButton } from "@clerk/clerk-react";
 import { MobileNavbar } from "../components/navbar";
 
 export default function Home() {
